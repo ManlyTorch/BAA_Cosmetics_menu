@@ -3131,4 +3131,4 @@ local function KZNQ_fake_script() -- AxeColorSelect.Draggable
 
 	script.Parent.Draggable = true
 end
-coroutine.wrap(KZNQ_fake_script)()=
+coroutine.wrap(KZNQ_fake_script)()
