@@ -901,7 +901,7 @@ Default_2.TextSize = 40.000
 
 -- Scripts:
 
-local function UVWVFUB_fake_script() -- CosmeticsMainFrame.LocalScript 
+local function OMDXWKP_fake_script() -- CosmeticsMainFrame.LocalScript 
 	local script = Instance.new('LocalScript', CosmeticsMainFrame)
 
 	local LocalPlayer = game.Players.LocalPlayer
@@ -1014,7 +1014,7 @@ local function UVWVFUB_fake_script() -- CosmeticsMainFrame.LocalScript
 		Toggles()
 	end)
 	
-	function Expand()
+	local function Expand()
 		if OpenClose_Toggle then
 			OC.Parent.Size = UDim2.new(0, 483, 0, 333)
 			OC.Position = UDim2.new(0, 439, 0, 6)
@@ -1055,7 +1055,7 @@ local function UVWVFUB_fake_script() -- CosmeticsMainFrame.LocalScript
 		end
 	end
 	Expand()
-	function ToggleMaterial(Material)
+	local function ToggleMaterial(Material)
 		if Axe_Material_Toggle then
 			Axe.Material = Material
 			MaterialList[1] = Axe.Material
@@ -1070,7 +1070,7 @@ local function UVWVFUB_fake_script() -- CosmeticsMainFrame.LocalScript
 			BallMaterial.Text = "Material: " .. Material
 		end
 	end
-	function BackgroundFor(List, Color)
+	local function BackgroundFor(List, Color)
 		for _, I in pairs(List:GetChildren()) do
 			if I:IsA("TextButton") then
 				I.BackgroundColor3 = Color
@@ -1080,7 +1080,7 @@ local function UVWVFUB_fake_script() -- CosmeticsMainFrame.LocalScript
 			end
 		end
 	end
-	function TextFor(List, Color)
+	local function TextFor(List, Color)
 		for _, I in pairs(List:GetChildren()) do
 			if I:IsA("TextButton") then
 				I.TextColor3 = Color
@@ -1090,7 +1090,7 @@ local function UVWVFUB_fake_script() -- CosmeticsMainFrame.LocalScript
 			end
 		end
 	end
-	function ToggleColor(b, Name)
+	local function ToggleColor(b, Name)
 		if Axe_Color_Toggle then
 			Axe.Color = b
 			AxeColor.Text = Name
@@ -1125,7 +1125,7 @@ local function UVWVFUB_fake_script() -- CosmeticsMainFrame.LocalScript
 			TextColor.Text = Name
 		end
 	end
-	function FalseToggles(ToggleName)
+	local function FalseToggles(ToggleName)
 		if ToggleName ~= "Axe_Material" then
 			Axe_Material_Toggle = false
 		end
@@ -1160,7 +1160,7 @@ local function UVWVFUB_fake_script() -- CosmeticsMainFrame.LocalScript
 			Text_Color_Toggle = false
 		end
 	end
-	function Toggles()
+	local function Toggles()
 		Colors.Default.Visible = not Ball_Color_Toggle
 		if Color_Select_Toggle then
 			Parent.Parent.Color_Select_Text.Visible = true
@@ -1173,7 +1173,7 @@ local function UVWVFUB_fake_script() -- CosmeticsMainFrame.LocalScript
 			Parent.Parent.Material_Select_Text.Visible = false
 		end
 	end
-	function RecalibratePlayer()
+	local function RecalibratePlayer()
 		LocalPlayerName = game.Players.LocalPlayer.Name
 		PM = game.Workspace.playerModels
 		Axe.UsePartColor = true
@@ -1439,7 +1439,7 @@ local function UVWVFUB_fake_script() -- CosmeticsMainFrame.LocalScript
 		Toggles()
 	end)
 	Materials.LeafyGrass.MouseButton1Click:Connect(function()
-		ToggleMaterial("LeafyGrass"
+		ToggleMaterial("LeafyGrass")
 		FalseToggles(false)
 		Toggles()
 	end)
@@ -1464,16 +1464,16 @@ local function UVWVFUB_fake_script() -- CosmeticsMainFrame.LocalScript
 		Toggles()
 	end)
 end
-coroutine.wrap(UVWVFUB_fake_script)()
-local function CEJMPPT_fake_script() -- Color_Select_Text.LocalScript 
+coroutine.wrap(OMDXWKP_fake_script)()
+local function ERWGXQS_fake_script() -- Color_Select_Text.LocalScript 
 	local script = Instance.new('LocalScript', Color_Select_Text)
 
 	script.Parent.Draggable = true
 end
-coroutine.wrap(CEJMPPT_fake_script)()
-local function GPJWBC_fake_script() -- Material_Select_Text.LocalScript 
+coroutine.wrap(ERWGXQS_fake_script)()
+local function UZWASUI_fake_script() -- Material_Select_Text.LocalScript 
 	local script = Instance.new('LocalScript', Material_Select_Text)
 
 	script.Parent.Draggable = true
 end
-coroutine.wrap(GPJWBC_fake_script)()
+coroutine.wrap(UZWASUI_fake_script)()
