@@ -86,7 +86,7 @@ local Default_2 = Instance.new("TextButton")
 --Properties:
 
 CosmeticsBAA.Name = "Cosmetics BAA"
-CosmeticsBAA.Parent = game.CoreGui
+CosmeticsBAA.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 CosmeticsBAA.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 CosmeticsMainFrame.Name = "Cosmetics Main Frame"
@@ -231,7 +231,7 @@ CosmeticsMenuLogo.Name = "Cosmetics Menu Logo"
 CosmeticsMenuLogo.Parent = CosmeticsMainFrame
 CosmeticsMenuLogo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 CosmeticsMenuLogo.BackgroundTransparency = 1.000
-CosmeticsMenuLogo.Position = UDim2.new(0.275362313, 0, 0.0180180185, 0)
+CosmeticsMenuLogo.Position = UDim2.new(0.254658371, 0, 0.0270270277, 0)
 CosmeticsMenuLogo.Size = UDim2.new(0, 300, 0, 50)
 CosmeticsMenuLogo.Font = Enum.Font.Unknown
 CosmeticsMenuLogo.Text = "Ball and axe cosmetic menu"
@@ -243,7 +243,7 @@ CosmeticsMenuCredits.Name = "Cosmetics Menu Credits"
 CosmeticsMenuCredits.Parent = CosmeticsMainFrame
 CosmeticsMenuCredits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 CosmeticsMenuCredits.BackgroundTransparency = 1.000
-CosmeticsMenuCredits.Position = UDim2.new(0.275362313, 0, 0.0870870948, 0)
+CosmeticsMenuCredits.Position = UDim2.new(0.254658371, 0, 0.0960961059, 0)
 CosmeticsMenuCredits.Size = UDim2.new(0, 300, 0, 50)
 CosmeticsMenuCredits.Font = Enum.Font.Unknown
 CosmeticsMenuCredits.Text = "Made by ManlyTorch"
@@ -255,7 +255,7 @@ CosmeticsMenuCredits2.Name = "Cosmetics Menu Credits2"
 CosmeticsMenuCredits2.Parent = CosmeticsMainFrame
 CosmeticsMenuCredits2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 CosmeticsMenuCredits2.BackgroundTransparency = 1.000
-CosmeticsMenuCredits2.Position = UDim2.new(0.275362313, 0, 0.141141146, 0)
+CosmeticsMenuCredits2.Position = UDim2.new(0.254658371, 0, 0.15015015, 0)
 CosmeticsMenuCredits2.Size = UDim2.new(0, 300, 0, 50)
 CosmeticsMenuCredits2.Font = Enum.Font.Unknown
 CosmeticsMenuCredits2.Text = "Logo by Gravy"
@@ -901,7 +901,7 @@ Default_2.TextSize = 40.000
 
 -- Scripts:
 
-local function OMDXWKP_fake_script() -- CosmeticsMainFrame.LocalScript 
+local function GAEZGL_fake_script() -- CosmeticsMainFrame.LocalScript 
 	local script = Instance.new('LocalScript', CosmeticsMainFrame)
 
 	local LocalPlayer = game.Players.LocalPlayer
@@ -1464,16 +1464,16 @@ local function OMDXWKP_fake_script() -- CosmeticsMainFrame.LocalScript
 		Toggles()
 	end)
 end
-coroutine.wrap(OMDXWKP_fake_script)()
-local function ERWGXQS_fake_script() -- Color_Select_Text.LocalScript 
+coroutine.wrap(GAEZGL_fake_script)()
+local function XNARWD_fake_script() -- Color_Select_Text.LocalScript 
 	local script = Instance.new('LocalScript', Color_Select_Text)
 
 	script.Parent.Draggable = true
 end
-coroutine.wrap(ERWGXQS_fake_script)()
-local function UZWASUI_fake_script() -- Material_Select_Text.LocalScript 
+coroutine.wrap(XNARWD_fake_script)()
+local function HOECPF_fake_script() -- Material_Select_Text.LocalScript 
 	local script = Instance.new('LocalScript', Material_Select_Text)
 
 	script.Parent.Draggable = true
 end
-coroutine.wrap(UZWASUI_fake_script)()
+coroutine.wrap(HOECPF_fake_script)()
