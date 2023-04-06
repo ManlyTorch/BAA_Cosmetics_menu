@@ -6,48 +6,43 @@
 local CosmeticsBAA = Instance.new("ScreenGui")
 local CosmeticsMainFrame = Instance.new("Frame")
 local OC = Instance.new("TextButton")
+local CosmeticsMenuLogo = Instance.new("TextLabel")
+local CosmeticsMenuCredits = Instance.new("TextLabel")
+local CosmeticsMenuCredits2 = Instance.new("TextLabel")
 local Logo = Instance.new("ImageLabel")
 local AxeHandleMaterial = Instance.new("TextButton")
 local BallMaterial = Instance.new("TextButton")
 local BallColor = Instance.new("TextButton")
+local ColorDisplay = Instance.new("ImageLabel")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
 local Ball = Instance.new("TextLabel")
 local AxeHandle = Instance.new("TextLabel")
 local AxeColor = Instance.new("TextButton")
+local ColorDisplay_2 = Instance.new("ImageLabel")
+local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
 local AxeMaterial = Instance.new("TextButton")
 local Axe = Instance.new("TextLabel")
 local AxeHandleColor = Instance.new("TextButton")
-local CosmeticsMenuLogo = Instance.new("TextLabel")
-local CosmeticsMenuCredits = Instance.new("TextLabel")
-local CosmeticsMenuCredits2 = Instance.new("TextLabel")
+local ColorDisplay_3 = Instance.new("ImageLabel")
+local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
 local Settings = Instance.new("TextButton")
 local Background = Instance.new("Frame")
 local TextColor = Instance.new("TextButton")
+local ColorDisplay_4 = Instance.new("ImageLabel")
+local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
 local ButtonBackgroundColor = Instance.new("TextButton")
+local ColorDisplay_5 = Instance.new("ImageLabel")
+local UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
 local BackgroundColor = Instance.new("TextButton")
-local Color_Select_Text = Instance.new("TextLabel")
-local Color_Select = Instance.new("ScrollingFrame")
-local UIGridLayout = Instance.new("UIGridLayout")
-local White = Instance.new("TextButton")
-local Red = Instance.new("TextButton")
-local Crimson = Instance.new("TextButton")
-local Cyan = Instance.new("TextButton")
-local Yellow = Instance.new("TextButton")
-local Green = Instance.new("TextButton")
-local Pink = Instance.new("TextButton")
-local Purple = Instance.new("TextButton")
-local Blue = Instance.new("TextButton")
-local Lime = Instance.new("TextButton")
-local Gray = Instance.new("TextButton")
-local Brown = Instance.new("TextButton")
-local Tan = Instance.new("TextButton")
-local Default = Instance.new("TextButton")
+local ColorDisplay_6 = Instance.new("ImageLabel")
+local UIAspectRatioConstraint_6 = Instance.new("UIAspectRatioConstraint")
 local Material_Select_Text = Instance.new("TextLabel")
 local Material_Select = Instance.new("ScrollingFrame")
 local Plastic = Instance.new("TextButton")
 local Wood = Instance.new("TextButton")
 local Slate = Instance.new("TextButton")
 local Concrete = Instance.new("TextButton")
-local UIGridLayout_2 = Instance.new("UIGridLayout")
+local UIGridLayout = Instance.new("UIGridLayout")
 local CorrodedMetal = Instance.new("TextButton")
 local DiamondPlate = Instance.new("TextButton")
 local Foil = Instance.new("TextButton")
@@ -81,12 +76,21 @@ local Salt = Instance.new("TextButton")
 local Limestone = Instance.new("TextButton")
 local Pavement = Instance.new("TextButton")
 local ForceField = Instance.new("TextButton")
-local Default_2 = Instance.new("TextButton")
+local Default = Instance.new("TextButton")
+local ColorWheelFrame = Instance.new("Frame")
+local ColorWheel = Instance.new("ImageButton")
+local Picker = Instance.new("ImageLabel")
+local Darknessmodifier = Instance.new("ImageButton")
+local UIGradient = Instance.new("UIGradient")
+local Slider = Instance.new("ImageLabel")
+local ColorDisplay_7 = Instance.new("ImageLabel")
+local UIAspectRatioConstraint_7 = Instance.new("UIAspectRatioConstraint")
+local Close = Instance.new("TextButton")
 
 --Properties:
 
 CosmeticsBAA.Name = "Cosmetics BAA"
-CosmeticsBAA.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+CosmeticsBAA.Parent = game.CoreGui
 CosmeticsBAA.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 CosmeticsMainFrame.Name = "Cosmetics Main Frame"
@@ -107,6 +111,42 @@ OC.Font = Enum.Font.Bodoni
 OC.Text = ">"
 OC.TextColor3 = Color3.fromRGB(255, 255, 255)
 OC.TextSize = 30.000
+
+CosmeticsMenuLogo.Name = "Cosmetics Menu Logo"
+CosmeticsMenuLogo.Parent = OC
+CosmeticsMenuLogo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CosmeticsMenuLogo.BackgroundTransparency = 1.000
+CosmeticsMenuLogo.Position = UDim2.new(0, -316, 0, -8)
+CosmeticsMenuLogo.Size = UDim2.new(0, 300, 0, 50)
+CosmeticsMenuLogo.Font = Enum.Font.Bangers
+CosmeticsMenuLogo.Text = "Ball and axe cosmetic menu"
+CosmeticsMenuLogo.TextColor3 = Color3.fromRGB(0, 0, 0)
+CosmeticsMenuLogo.TextSize = 30.000
+CosmeticsMenuLogo.TextXAlignment = Enum.TextXAlignment.Right
+
+CosmeticsMenuCredits.Name = "Cosmetics Menu Credits"
+CosmeticsMenuCredits.Parent = CosmeticsMenuLogo
+CosmeticsMenuCredits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CosmeticsMenuCredits.BackgroundTransparency = 1.000
+CosmeticsMenuCredits.Position = UDim2.new(0, -8, 0, 20)
+CosmeticsMenuCredits.Size = UDim2.new(0, 300, 0, 50)
+CosmeticsMenuCredits.Font = Enum.Font.Bangers
+CosmeticsMenuCredits.Text = "Made by ManlyTorch"
+CosmeticsMenuCredits.TextColor3 = Color3.fromRGB(0, 0, 0)
+CosmeticsMenuCredits.TextSize = 22.000
+CosmeticsMenuCredits.TextXAlignment = Enum.TextXAlignment.Right
+
+CosmeticsMenuCredits2.Name = "Cosmetics Menu Credits2"
+CosmeticsMenuCredits2.Parent = CosmeticsMenuLogo
+CosmeticsMenuCredits2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CosmeticsMenuCredits2.BackgroundTransparency = 1.000
+CosmeticsMenuCredits2.Position = UDim2.new(0, -16, 0, 38)
+CosmeticsMenuCredits2.Size = UDim2.new(0, 300, 0, 50)
+CosmeticsMenuCredits2.Font = Enum.Font.Bangers
+CosmeticsMenuCredits2.Text = "Logo by Gravy"
+CosmeticsMenuCredits2.TextColor3 = Color3.fromRGB(0, 0, 0)
+CosmeticsMenuCredits2.TextSize = 22.000
+CosmeticsMenuCredits2.TextXAlignment = Enum.TextXAlignment.Right
 
 Logo.Name = "Logo"
 Logo.Parent = CosmeticsMainFrame
@@ -149,11 +189,25 @@ BallColor.BackgroundTransparency = 0.650
 BallColor.Position = UDim2.new(0, 283, 0, 108)
 BallColor.Size = UDim2.new(0, 150, 0, 50)
 BallColor.Font = Enum.Font.Bodoni
-BallColor.Text = "Color: Nil"
+BallColor.Text = "Color:   "
 BallColor.TextColor3 = Color3.fromRGB(255, 255, 255)
-BallColor.TextScaled = true
-BallColor.TextSize = 23.000
+BallColor.TextSize = 40.000
 BallColor.TextWrapped = true
+
+ColorDisplay.Name = "Color Display"
+ColorDisplay.Parent = BallColor
+ColorDisplay.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ColorDisplay.BackgroundTransparency = 1.000
+ColorDisplay.BorderSizePixel = 0
+ColorDisplay.Position = UDim2.new(0.727206647, 0, 0.0803369135, 0)
+ColorDisplay.Size = UDim2.new(0, 40, 0, 40)
+ColorDisplay.ZIndex = 2
+ColorDisplay.Image = "rbxassetid://3570695787"
+ColorDisplay.ScaleType = Enum.ScaleType.Crop
+ColorDisplay.SliceCenter = Rect.new(100, 100, 100, 100)
+ColorDisplay.SliceScale = 0.120
+
+UIAspectRatioConstraint.Parent = ColorDisplay
 
 Ball.Name = "Ball"
 Ball.Parent = CosmeticsMainFrame
@@ -184,11 +238,24 @@ AxeColor.BackgroundTransparency = 0.650
 AxeColor.Position = UDim2.new(0, 283, 0, 258)
 AxeColor.Size = UDim2.new(0, 150, 0, 50)
 AxeColor.Font = Enum.Font.Bodoni
-AxeColor.Text = "Color: Default"
+AxeColor.Text = "Color:   "
 AxeColor.TextColor3 = Color3.fromRGB(255, 255, 255)
-AxeColor.TextScaled = true
-AxeColor.TextSize = 23.000
-AxeColor.TextWrapped = true
+AxeColor.TextSize = 40.000
+
+ColorDisplay_2.Name = "Color Display"
+ColorDisplay_2.Parent = AxeColor
+ColorDisplay_2.BackgroundTransparency = 1.000
+ColorDisplay_2.BorderSizePixel = 0
+ColorDisplay_2.Position = UDim2.new(0.727206647, 0, 0.0803369135, 0)
+ColorDisplay_2.Size = UDim2.new(0, 40, 0, 40)
+ColorDisplay_2.ZIndex = 2
+ColorDisplay_2.Image = "rbxassetid://3570695787"
+ColorDisplay_2.ImageColor3 = Color3.fromRGB(163, 162, 165)
+ColorDisplay_2.ScaleType = Enum.ScaleType.Crop
+ColorDisplay_2.SliceCenter = Rect.new(100, 100, 100, 100)
+ColorDisplay_2.SliceScale = 0.120
+
+UIAspectRatioConstraint_2.Parent = ColorDisplay_2
 
 AxeMaterial.Name = "Axe Material"
 AxeMaterial.Parent = CosmeticsMainFrame
@@ -221,53 +288,31 @@ AxeHandleColor.BackgroundTransparency = 0.650
 AxeHandleColor.Position = UDim2.new(0, 283, 0, 183)
 AxeHandleColor.Size = UDim2.new(0, 150, 0, 50)
 AxeHandleColor.Font = Enum.Font.Bodoni
-AxeHandleColor.Text = "Color: Default"
+AxeHandleColor.Text = "Color:   "
 AxeHandleColor.TextColor3 = Color3.fromRGB(255, 255, 255)
-AxeHandleColor.TextScaled = true
-AxeHandleColor.TextSize = 23.000
-AxeHandleColor.TextWrapped = true
+AxeHandleColor.TextSize = 40.000
 
-CosmeticsMenuLogo.Name = "Cosmetics Menu Logo"
-CosmeticsMenuLogo.Parent = CosmeticsMainFrame
-CosmeticsMenuLogo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CosmeticsMenuLogo.BackgroundTransparency = 1.000
-CosmeticsMenuLogo.Position = UDim2.new(0.254658371, 0, 0.0270270277, 0)
-CosmeticsMenuLogo.Size = UDim2.new(0, 300, 0, 50)
-CosmeticsMenuLogo.Font = Enum.Font.Unknown
-CosmeticsMenuLogo.Text = "Ball and axe cosmetic menu"
-CosmeticsMenuLogo.TextColor3 = Color3.fromRGB(0, 0, 0)
-CosmeticsMenuLogo.TextSize = 30.000
-CosmeticsMenuLogo.TextXAlignment = Enum.TextXAlignment.Right
+ColorDisplay_3.Name = "Color Display"
+ColorDisplay_3.Parent = AxeHandleColor
+ColorDisplay_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ColorDisplay_3.BackgroundTransparency = 1.000
+ColorDisplay_3.BorderSizePixel = 0
+ColorDisplay_3.Position = UDim2.new(0.727206647, 0, 0.0803369135, 0)
+ColorDisplay_3.Size = UDim2.new(0, 40, 0, 40)
+ColorDisplay_3.ZIndex = 2
+ColorDisplay_3.Image = "rbxassetid://3570695787"
+ColorDisplay_3.ImageColor3 = Color3.fromRGB(159, 137, 103)
+ColorDisplay_3.ScaleType = Enum.ScaleType.Crop
+ColorDisplay_3.SliceCenter = Rect.new(100, 100, 100, 100)
+ColorDisplay_3.SliceScale = 0.120
 
-CosmeticsMenuCredits.Name = "Cosmetics Menu Credits"
-CosmeticsMenuCredits.Parent = CosmeticsMainFrame
-CosmeticsMenuCredits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CosmeticsMenuCredits.BackgroundTransparency = 1.000
-CosmeticsMenuCredits.Position = UDim2.new(0.254658371, 0, 0.0960961059, 0)
-CosmeticsMenuCredits.Size = UDim2.new(0, 300, 0, 50)
-CosmeticsMenuCredits.Font = Enum.Font.Unknown
-CosmeticsMenuCredits.Text = "Made by ManlyTorch"
-CosmeticsMenuCredits.TextColor3 = Color3.fromRGB(0, 0, 0)
-CosmeticsMenuCredits.TextSize = 22.000
-CosmeticsMenuCredits.TextXAlignment = Enum.TextXAlignment.Right
-
-CosmeticsMenuCredits2.Name = "Cosmetics Menu Credits2"
-CosmeticsMenuCredits2.Parent = CosmeticsMainFrame
-CosmeticsMenuCredits2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CosmeticsMenuCredits2.BackgroundTransparency = 1.000
-CosmeticsMenuCredits2.Position = UDim2.new(0.254658371, 0, 0.15015015, 0)
-CosmeticsMenuCredits2.Size = UDim2.new(0, 300, 0, 50)
-CosmeticsMenuCredits2.Font = Enum.Font.Unknown
-CosmeticsMenuCredits2.Text = "Logo by Gravy"
-CosmeticsMenuCredits2.TextColor3 = Color3.fromRGB(0, 0, 0)
-CosmeticsMenuCredits2.TextSize = 22.000
-CosmeticsMenuCredits2.TextXAlignment = Enum.TextXAlignment.Right
+UIAspectRatioConstraint_3.Parent = ColorDisplay_3
 
 Settings.Name = "Settings"
 Settings.Parent = CosmeticsMainFrame
 Settings.BackgroundColor3 = Color3.fromRGB(1, 39, 255)
 Settings.BackgroundTransparency = 0.650
-Settings.Position = UDim2.new(0.322981358, 0, -0.105105154, 0)
+Settings.Position = UDim2.new(0, 143, 0, -36)
 Settings.Size = UDim2.new(0, 160, 0, 35)
 Settings.ZIndex = 5
 Settings.Font = Enum.Font.Bodoni
@@ -280,216 +325,97 @@ Background.Parent = Settings
 Background.Active = true
 Background.BackgroundColor3 = Color3.fromRGB(131, 78, 206)
 Background.BackgroundTransparency = 0.650
-Background.Position = UDim2.new(-0.975416541, 0, 10.4869642, 0)
+Background.Position = UDim2.new(0, -143, 0, 369)
 Background.Size = UDim2.new(0, 483, 0, 99)
-Background.Visible = false
 Background.ZIndex = 0
 
 TextColor.Name = "Text Color"
 TextColor.Parent = Background
 TextColor.BackgroundColor3 = Color3.fromRGB(1, 39, 255)
 TextColor.BackgroundTransparency = 0.650
-TextColor.Position = UDim2.new(0, 333, 0, 38)
+TextColor.Position = UDim2.new(0, 333, 0, 24)
 TextColor.Size = UDim2.new(0, 150, 0, 50)
 TextColor.ZIndex = 5
 TextColor.Font = Enum.Font.Bodoni
-TextColor.Text = "Text Color"
+TextColor.Text = "Text Color:     "
 TextColor.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextColor.TextSize = 20.000
+TextColor.TextSize = 25.000
+TextColor.TextWrapped = true
+
+ColorDisplay_4.Name = "Color Display"
+ColorDisplay_4.Parent = TextColor
+ColorDisplay_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ColorDisplay_4.BackgroundTransparency = 1.000
+ColorDisplay_4.BorderSizePixel = 0
+ColorDisplay_4.Position = UDim2.new(0.727206647, 0, 0.0803369135, 0)
+ColorDisplay_4.Size = UDim2.new(0, 40, 0, 40)
+ColorDisplay_4.ZIndex = 2
+ColorDisplay_4.Image = "rbxassetid://3570695787"
+ColorDisplay_4.ScaleType = Enum.ScaleType.Crop
+ColorDisplay_4.SliceCenter = Rect.new(100, 100, 100, 100)
+ColorDisplay_4.SliceScale = 0.120
+
+UIAspectRatioConstraint_4.Parent = ColorDisplay_4
 
 ButtonBackgroundColor.Name = "Button Background Color"
 ButtonBackgroundColor.Parent = Background
 ButtonBackgroundColor.BackgroundColor3 = Color3.fromRGB(1, 39, 255)
 ButtonBackgroundColor.BackgroundTransparency = 0.650
-ButtonBackgroundColor.Position = UDim2.new(0, 166, 0, 38)
+ButtonBackgroundColor.Position = UDim2.new(0, 166, 0, 24)
 ButtonBackgroundColor.Size = UDim2.new(0, 150, 0, 50)
 ButtonBackgroundColor.ZIndex = 5
 ButtonBackgroundColor.Font = Enum.Font.Bodoni
-ButtonBackgroundColor.Text = "Button Background"
+ButtonBackgroundColor.Text = "Text Background  Color:            "
 ButtonBackgroundColor.TextColor3 = Color3.fromRGB(255, 255, 255)
+ButtonBackgroundColor.TextScaled = true
 ButtonBackgroundColor.TextSize = 20.000
+ButtonBackgroundColor.TextWrapped = true
+
+ColorDisplay_5.Name = "Color Display"
+ColorDisplay_5.Parent = ButtonBackgroundColor
+ColorDisplay_5.BackgroundColor3 = Color3.fromRGB(1, 39, 255)
+ColorDisplay_5.BackgroundTransparency = 1.000
+ColorDisplay_5.BorderSizePixel = 0
+ColorDisplay_5.Position = UDim2.new(0, 55, 0, 23)
+ColorDisplay_5.Size = UDim2.new(0, 26, 0, 25)
+ColorDisplay_5.ZIndex = 2
+ColorDisplay_5.Image = "rbxassetid://3570695787"
+ColorDisplay_5.ImageColor3 = Color3.fromRGB(1, 39, 255)
+ColorDisplay_5.ScaleType = Enum.ScaleType.Slice
+ColorDisplay_5.SliceCenter = Rect.new(100, 100, 100, 100)
+ColorDisplay_5.SliceScale = 0.120
+
+UIAspectRatioConstraint_5.Parent = ColorDisplay_5
 
 BackgroundColor.Name = "Background Color"
 BackgroundColor.Parent = Background
 BackgroundColor.BackgroundColor3 = Color3.fromRGB(1, 39, 255)
 BackgroundColor.BackgroundTransparency = 0.650
-BackgroundColor.Position = UDim2.new(0, 0, 0, 38)
+BackgroundColor.Position = UDim2.new(0, 0, 0, 24)
 BackgroundColor.Size = UDim2.new(0, 150, 0, 50)
 BackgroundColor.ZIndex = 5
 BackgroundColor.Font = Enum.Font.Bodoni
-BackgroundColor.Text = "Background"
+BackgroundColor.Text = "Background Color:       "
 BackgroundColor.TextColor3 = Color3.fromRGB(255, 255, 255)
+BackgroundColor.TextScaled = true
 BackgroundColor.TextSize = 20.000
+BackgroundColor.TextWrapped = true
 
-Color_Select_Text.Name = "Color_Select_Text"
-Color_Select_Text.Parent = CosmeticsBAA
-Color_Select_Text.BackgroundColor3 = Color3.fromRGB(131, 78, 206)
-Color_Select_Text.BackgroundTransparency = 0.650
-Color_Select_Text.Position = UDim2.new(0.418272644, 0, 0.232558131, 0)
-Color_Select_Text.Size = UDim2.new(0, 229, 0, 50)
-Color_Select_Text.Visible = false
-Color_Select_Text.Font = Enum.Font.LuckiestGuy
-Color_Select_Text.Text = "Colors:"
-Color_Select_Text.TextColor3 = Color3.fromRGB(255, 255, 255)
-Color_Select_Text.TextSize = 35.000
+ColorDisplay_6.Name = "Color Display"
+ColorDisplay_6.Parent = BackgroundColor
+ColorDisplay_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ColorDisplay_6.BackgroundTransparency = 1.000
+ColorDisplay_6.BorderSizePixel = 0
+ColorDisplay_6.Position = UDim2.new(0, 80, 0, 23)
+ColorDisplay_6.Size = UDim2.new(0, 26, 0, 25)
+ColorDisplay_6.ZIndex = 2
+ColorDisplay_6.Image = "rbxassetid://3570695787"
+ColorDisplay_6.ImageColor3 = Color3.fromRGB(131, 78, 206)
+ColorDisplay_6.ScaleType = Enum.ScaleType.Slice
+ColorDisplay_6.SliceCenter = Rect.new(100, 100, 100, 100)
+ColorDisplay_6.SliceScale = 0.120
 
-Color_Select.Name = "Color_Select"
-Color_Select.Parent = Color_Select_Text
-Color_Select.Active = true
-Color_Select.BackgroundColor3 = Color3.fromRGB(131, 78, 206)
-Color_Select.BackgroundTransparency = 0.650
-Color_Select.Position = UDim2.new(0, 0, 0, 51)
-Color_Select.Size = UDim2.new(0, 229, 0, 243)
-Color_Select.CanvasSize = UDim2.new(0, 150, 0, 765)
-
-UIGridLayout.Parent = Color_Select
-UIGridLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
-UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
-UIGridLayout.CellPadding = UDim2.new(0, 0, 0, 5)
-UIGridLayout.CellSize = UDim2.new(0, 200, 0, 50)
-
-White.Name = "White"
-White.Parent = Color_Select
-White.BackgroundColor3 = Color3.fromRGB(1, 39, 255)
-White.BackgroundTransparency = 0.700
-White.Size = UDim2.new(0, 200, 0, 50)
-White.Font = Enum.Font.SourceSans
-White.Text = "White"
-White.TextColor3 = Color3.fromRGB(255, 255, 255)
-White.TextSize = 40.000
-
-Red.Name = "Red"
-Red.Parent = Color_Select
-Red.BackgroundColor3 = Color3.fromRGB(1, 39, 255)
-Red.BackgroundTransparency = 0.700
-Red.Size = UDim2.new(0, 200, 0, 50)
-Red.Font = Enum.Font.SourceSans
-Red.Text = "Red"
-Red.TextColor3 = Color3.fromRGB(255, 255, 255)
-Red.TextSize = 40.000
-
-Crimson.Name = "Crimson"
-Crimson.Parent = Color_Select
-Crimson.BackgroundColor3 = Color3.fromRGB(1, 39, 255)
-Crimson.BackgroundTransparency = 0.700
-Crimson.Position = UDim2.new(0.0611353703, 0, -0.0205761325, 0)
-Crimson.Size = UDim2.new(0, 200, 0, 50)
-Crimson.Font = Enum.Font.SourceSans
-Crimson.Text = "Crimson"
-Crimson.TextColor3 = Color3.fromRGB(255, 255, 255)
-Crimson.TextSize = 40.000
-
-Cyan.Name = "Cyan"
-Cyan.Parent = Color_Select
-Cyan.BackgroundColor3 = Color3.fromRGB(1, 39, 255)
-Cyan.BackgroundTransparency = 0.700
-Cyan.Size = UDim2.new(0, 200, 0, 50)
-Cyan.Font = Enum.Font.SourceSans
-Cyan.Text = "Cyan"
-Cyan.TextColor3 = Color3.fromRGB(255, 255, 255)
-Cyan.TextSize = 40.000
-
-Yellow.Name = "Yellow"
-Yellow.Parent = Color_Select
-Yellow.BackgroundColor3 = Color3.fromRGB(1, 39, 255)
-Yellow.BackgroundTransparency = 0.700
-Yellow.Size = UDim2.new(0, 200, 0, 50)
-Yellow.Font = Enum.Font.SourceSans
-Yellow.Text = "Yellow"
-Yellow.TextColor3 = Color3.fromRGB(255, 255, 255)
-Yellow.TextSize = 40.000
-
-Green.Name = "Green"
-Green.Parent = Color_Select
-Green.BackgroundColor3 = Color3.fromRGB(1, 39, 255)
-Green.BackgroundTransparency = 0.700
-Green.Size = UDim2.new(0, 200, 0, 50)
-Green.Font = Enum.Font.SourceSans
-Green.Text = "Green"
-Green.TextColor3 = Color3.fromRGB(255, 255, 255)
-Green.TextSize = 40.000
-
-Pink.Name = "Pink"
-Pink.Parent = Color_Select
-Pink.BackgroundColor3 = Color3.fromRGB(1, 39, 255)
-Pink.BackgroundTransparency = 0.700
-Pink.Size = UDim2.new(0, 200, 0, 50)
-Pink.Font = Enum.Font.SourceSans
-Pink.Text = "Pink"
-Pink.TextColor3 = Color3.fromRGB(255, 255, 255)
-Pink.TextSize = 40.000
-
-Purple.Name = "Purple"
-Purple.Parent = Color_Select
-Purple.BackgroundColor3 = Color3.fromRGB(1, 39, 255)
-Purple.BackgroundTransparency = 0.700
-Purple.Size = UDim2.new(0, 200, 0, 50)
-Purple.Font = Enum.Font.SourceSans
-Purple.Text = "Purple"
-Purple.TextColor3 = Color3.fromRGB(255, 255, 255)
-Purple.TextSize = 40.000
-
-Blue.Name = "Blue"
-Blue.Parent = Color_Select
-Blue.BackgroundColor3 = Color3.fromRGB(1, 39, 255)
-Blue.BackgroundTransparency = 0.700
-Blue.Size = UDim2.new(0, 200, 0, 50)
-Blue.Font = Enum.Font.SourceSans
-Blue.Text = "Blue"
-Blue.TextColor3 = Color3.fromRGB(255, 255, 255)
-Blue.TextSize = 40.000
-
-Lime.Name = "Lime"
-Lime.Parent = Color_Select
-Lime.BackgroundColor3 = Color3.fromRGB(1, 39, 255)
-Lime.BackgroundTransparency = 0.700
-Lime.Size = UDim2.new(0, 200, 0, 50)
-Lime.Font = Enum.Font.SourceSans
-Lime.Text = "Lime"
-Lime.TextColor3 = Color3.fromRGB(255, 255, 255)
-Lime.TextSize = 40.000
-
-Gray.Name = "Gray"
-Gray.Parent = Color_Select
-Gray.BackgroundColor3 = Color3.fromRGB(1, 39, 255)
-Gray.BackgroundTransparency = 0.700
-Gray.Position = UDim2.new(-0.0043668123, 0, 0.00411522575, 0)
-Gray.Size = UDim2.new(0, 200, 0, 50)
-Gray.Font = Enum.Font.SourceSans
-Gray.Text = "Gray"
-Gray.TextColor3 = Color3.fromRGB(255, 255, 255)
-Gray.TextSize = 40.000
-
-Brown.Name = "Brown"
-Brown.Parent = Color_Select
-Brown.BackgroundColor3 = Color3.fromRGB(1, 39, 255)
-Brown.BackgroundTransparency = 0.700
-Brown.Position = UDim2.new(0.0305676851, 0, -0.0617283955, 0)
-Brown.Size = UDim2.new(0, 200, 0, 50)
-Brown.Font = Enum.Font.SourceSans
-Brown.Text = "Brown"
-Brown.TextColor3 = Color3.fromRGB(255, 255, 255)
-Brown.TextSize = 40.000
-
-Tan.Name = "Tan"
-Tan.Parent = Color_Select
-Tan.BackgroundColor3 = Color3.fromRGB(1, 39, 255)
-Tan.BackgroundTransparency = 0.700
-Tan.Size = UDim2.new(0, 200, 0, 50)
-Tan.Font = Enum.Font.SourceSans
-Tan.Text = "Tan"
-Tan.TextColor3 = Color3.fromRGB(255, 255, 255)
-Tan.TextSize = 40.000
-
-Default.Name = "Default"
-Default.Parent = Color_Select
-Default.BackgroundColor3 = Color3.fromRGB(1, 39, 255)
-Default.BackgroundTransparency = 0.700
-Default.Size = UDim2.new(0, 200, 0, 50)
-Default.Font = Enum.Font.SourceSans
-Default.Text = "Default"
-Default.TextColor3 = Color3.fromRGB(255, 255, 255)
-Default.TextSize = 40.000
+UIAspectRatioConstraint_6.Parent = ColorDisplay_6
 
 Material_Select_Text.Name = "Material_Select_Text"
 Material_Select_Text.Parent = CosmeticsBAA
@@ -553,11 +479,11 @@ Concrete.Text = "ConCrete"
 Concrete.TextColor3 = Color3.fromRGB(255, 255, 255)
 Concrete.TextSize = 40.000
 
-UIGridLayout_2.Parent = Material_Select
-UIGridLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
-UIGridLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
-UIGridLayout_2.CellPadding = UDim2.new(0, 0, 0, 5)
-UIGridLayout_2.CellSize = UDim2.new(0, 200, 0, 50)
+UIGridLayout.Parent = Material_Select
+UIGridLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout.CellPadding = UDim2.new(0, 0, 0, 5)
+UIGridLayout.CellSize = UDim2.new(0, 200, 0, 50)
 
 CorrodedMetal.Name = "CorrodedMetal"
 CorrodedMetal.Parent = Material_Select
@@ -889,19 +815,110 @@ ForceField.Text = "ForceField"
 ForceField.TextColor3 = Color3.fromRGB(255, 255, 255)
 ForceField.TextSize = 40.000
 
-Default_2.Name = "Default"
-Default_2.Parent = Material_Select
-Default_2.BackgroundColor3 = Color3.fromRGB(1, 39, 255)
-Default_2.BackgroundTransparency = 0.700
-Default_2.Size = UDim2.new(0, 200, 0, 50)
-Default_2.Font = Enum.Font.SourceSans
-Default_2.Text = "Default"
-Default_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-Default_2.TextSize = 40.000
+Default.Name = "Default"
+Default.Parent = Material_Select
+Default.BackgroundColor3 = Color3.fromRGB(1, 39, 255)
+Default.BackgroundTransparency = 0.700
+Default.Size = UDim2.new(0, 200, 0, 50)
+Default.Font = Enum.Font.SourceSans
+Default.Text = "Default"
+Default.TextColor3 = Color3.fromRGB(255, 255, 255)
+Default.TextSize = 40.000
+
+ColorWheelFrame.Name = "ColorWheelFrame"
+ColorWheelFrame.Parent = CosmeticsBAA
+ColorWheelFrame.BackgroundColor3 = Color3.fromRGB(131, 78, 206)
+ColorWheelFrame.BackgroundTransparency = 0.650
+ColorWheelFrame.Position = UDim2.new(0.341659248, 0, 0.268217057, 0)
+ColorWheelFrame.Size = UDim2.new(0, 400, 0, 299)
+ColorWheelFrame.Visible = false
+
+ColorWheel.Name = "ColorWheel"
+ColorWheel.Parent = ColorWheelFrame
+ColorWheel.Active = false
+ColorWheel.AnchorPoint = Vector2.new(0.5, 0.5)
+ColorWheel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ColorWheel.BackgroundTransparency = 1.000
+ColorWheel.BorderSizePixel = 0
+ColorWheel.Position = UDim2.new(0, 135, 0, 164)
+ColorWheel.Selectable = false
+ColorWheel.Size = UDim2.new(0, 250, 0, 250)
+ColorWheel.Image = "http://www.roblox.com/asset/?id=6020299385"
+
+Picker.Name = "Picker"
+Picker.Parent = ColorWheel
+Picker.AnchorPoint = Vector2.new(0.5, 0.5)
+Picker.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Picker.BackgroundTransparency = 1.000
+Picker.BorderSizePixel = 0
+Picker.Position = UDim2.new(0.5, 0, 0.5, 0)
+Picker.Size = UDim2.new(0.0900257826, 0, 0.0900257975, 0)
+Picker.Image = "http://www.roblox.com/asset/?id=3678860011"
+
+Darknessmodifier.Name = "Darkness modifier"
+Darknessmodifier.Parent = ColorWheel
+Darknessmodifier.Active = false
+Darknessmodifier.AnchorPoint = Vector2.new(0.5, 0.5)
+Darknessmodifier.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Darknessmodifier.BackgroundTransparency = 1.000
+Darknessmodifier.BorderSizePixel = 0
+Darknessmodifier.Position = UDim2.new(1.17200005, 0, 0.5, 0)
+Darknessmodifier.Selectable = false
+Darknessmodifier.Size = UDim2.new(0, 40, 0, 250)
+Darknessmodifier.ZIndex = 2
+Darknessmodifier.Image = "rbxassetid://3570695787"
+Darknessmodifier.ScaleType = Enum.ScaleType.Slice
+Darknessmodifier.SliceCenter = Rect.new(100, 100, 100, 100)
+Darknessmodifier.SliceScale = 0.120
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))}
+UIGradient.Rotation = 90
+UIGradient.Parent = Darknessmodifier
+
+Slider.Name = "Slider"
+Slider.Parent = Darknessmodifier
+Slider.AnchorPoint = Vector2.new(0.5, 0.5)
+Slider.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Slider.BackgroundTransparency = 1.000
+Slider.BorderSizePixel = 0
+Slider.Position = UDim2.new(0.491197795, 0, 0.0733607039, 0)
+Slider.Size = UDim2.new(1.28656352, 0, 0.0265010502, 0)
+Slider.ZIndex = 2
+Slider.Image = "rbxassetid://3570695787"
+Slider.ImageColor3 = Color3.fromRGB(255, 74, 74)
+Slider.ScaleType = Enum.ScaleType.Slice
+Slider.SliceCenter = Rect.new(100, 100, 100, 100)
+Slider.SliceScale = 0.120
+
+ColorDisplay_7.Name = "Color Display"
+ColorDisplay_7.Parent = ColorWheel
+ColorDisplay_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ColorDisplay_7.BackgroundTransparency = 1.000
+ColorDisplay_7.BorderSizePixel = 0
+ColorDisplay_7.Position = UDim2.new(1.31127357, 0, -0.119663313, 0)
+ColorDisplay_7.Size = UDim2.new(0.208204597, 0, 0.203424811, 0)
+ColorDisplay_7.ZIndex = 2
+ColorDisplay_7.Image = "rbxassetid://3570695787"
+ColorDisplay_7.ScaleType = Enum.ScaleType.Slice
+ColorDisplay_7.SliceCenter = Rect.new(100, 100, 100, 100)
+ColorDisplay_7.SliceScale = 0.120
+
+UIAspectRatioConstraint_7.Parent = ColorDisplay_7
+
+Close.Name = "Close"
+Close.Parent = ColorWheel
+Close.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Close.BackgroundTransparency = 0.500
+Close.Position = UDim2.new(-0.0399999991, 0, -0.156000003, 0)
+Close.Size = UDim2.new(0, 40, 0, 40)
+Close.Font = Enum.Font.Gotham
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(255, 255, 255)
+Close.TextSize = 50.000
 
 -- Scripts:
 
-local function GAEZGL_fake_script() -- CosmeticsMainFrame.LocalScript 
+local function DLOZ_fake_script() -- CosmeticsMainFrame.LocalScript 
 	local script = Instance.new('LocalScript', CosmeticsMainFrame)
 
 	local LocalPlayer = game.Players.LocalPlayer
@@ -924,13 +941,20 @@ local function GAEZGL_fake_script() -- CosmeticsMainFrame.LocalScript
 	local Button_BackgroundColor = SettingsFrame["Button Background Color"]
 	local TextColor = SettingsFrame["Text Color"]
 	local Materials = Parent.Parent.Material_Select_Text.Material_Select
-	local Colors = Parent.Parent.Color_Select_Text.Color_Select
-	Parent.Draggable = true
+	local Colors = Parent.Parent.ColorWheelFrame
+	local ColorWheel = Parent.Parent.ColorWheelFrame:WaitForChild("ColorWheel")
+	local WheelPicker = ColorWheel:WaitForChild("Picker")
+	local DarknessPicker = ColorWheel:WaitForChild("Darkness modifier")
+	local DarknessSlider = DarknessPicker:WaitForChild("Slider")
+	local ColorDisplay = ColorWheel:WaitForChild("Color Display")
+	local uis = game:GetService("UserInputService")
+	local buttonDown = false
+	local movingSlider = false
+	local isDown = false
 	local ColorList = {
 		Axe.Color,
 		Handle.Color,
-		Ball.Color,
-		Settings.BackgroundColor3
+		Ball.Color
 	}
 	local MaterialList = {
 		Axe.Material,
@@ -952,6 +976,8 @@ local function GAEZGL_fake_script() -- CosmeticsMainFrame.LocalScript
 	local Color_Select_Toggle = false
 	local OpenClose_Toggle = false
 	
+	Parent.Draggable = true
+	BallColor["Color Display"].ImageColor3 = Ball.Color
 	OC.MouseButton1Click:Connect(function()
 		OpenClose_Toggle = not OpenClose_Toggle
 		Expand()
@@ -1014,7 +1040,7 @@ local function GAEZGL_fake_script() -- CosmeticsMainFrame.LocalScript
 		Toggles()
 	end)
 	
-	local function Expand()
+	function Expand()
 		if OpenClose_Toggle then
 			OC.Parent.Size = UDim2.new(0, 483, 0, 333)
 			OC.Position = UDim2.new(0, 439, 0, 6)
@@ -1029,9 +1055,7 @@ local function GAEZGL_fake_script() -- CosmeticsMainFrame.LocalScript
 			Parent.Ball.Visible = true
 			Parent["Ball Color"].Visible = true
 			Parent["Ball Material"].Visible = true
-			Parent["Cosmetics Menu Logo"].Visible = true
-			Parent["Cosmetics Menu Credits"].Visible = true
-			Parent["Cosmetics Menu Credits2"].Visible = true
+			Parent.OC["Cosmetics Menu Logo"].Visible = true
 			Parent.Settings.Visible = true
 	
 		else
@@ -1048,14 +1072,11 @@ local function GAEZGL_fake_script() -- CosmeticsMainFrame.LocalScript
 			Parent.Ball.Visible = false
 			Parent["Ball Color"].Visible = false
 			Parent["Ball Material"].Visible = false
-			Parent["Cosmetics Menu Logo"].Visible = false
-			Parent["Cosmetics Menu Credits"].Visible = false
-			Parent["Cosmetics Menu Credits2"].Visible = false
+			Parent.OC["Cosmetics Menu Logo"].Visible = false
 			Parent.Settings.Visible = false
 		end
 	end
-	Expand()
-	local function ToggleMaterial(Material)
+	function ToggleMaterial(Material)
 		if Axe_Material_Toggle then
 			Axe.Material = Material
 			MaterialList[1] = Axe.Material
@@ -1070,7 +1091,7 @@ local function GAEZGL_fake_script() -- CosmeticsMainFrame.LocalScript
 			BallMaterial.Text = "Material: " .. Material
 		end
 	end
-	local function BackgroundFor(List, Color)
+	function BackgroundFor(List, Color)
 		for _, I in pairs(List:GetChildren()) do
 			if I:IsA("TextButton") then
 				I.BackgroundColor3 = Color
@@ -1080,7 +1101,7 @@ local function GAEZGL_fake_script() -- CosmeticsMainFrame.LocalScript
 			end
 		end
 	end
-	local function TextFor(List, Color)
+	function TextFor(List, Color)
 		for _, I in pairs(List:GetChildren()) do
 			if I:IsA("TextButton") then
 				I.TextColor3 = Color
@@ -1090,42 +1111,39 @@ local function GAEZGL_fake_script() -- CosmeticsMainFrame.LocalScript
 			end
 		end
 	end
-	local function ToggleColor(b, Name)
+	function ToggleColor(b)
 		if Axe_Color_Toggle then
 			Axe.Color = b
-			AxeColor.Text = Name
+			AxeColor["Color Display"].ImageColor3 = b
 			ColorList[1] = b
 		elseif Handle_Color_Toggle then
 			Handle.Color = b
-			HandleColor.Text = Name
+			HandleColor["Color Display"].ImageColor3 = b
 			ColorList[2] = b
 		elseif Ball_Color_Toggle then
 			Ball.Color = b
 			ColorList[3] = b
-			BallColor.Text = Name
+			BallColor["Color Display"].ImageColor3 = b
 		elseif Background_Color_Toggle then
 			Parent.BackgroundColor3 = b
 			SettingsFrame.BackgroundColor3 = b
-			Parent.Parent.Color_Select_Text.BackgroundColor3 = b
-			Parent.Parent.Color_Select_Text.Color_Select.BackgroundColor3 = b
+			Parent.Parent.ColorWheelFrame.BackgroundColor3 = b
 			Parent.Parent.Material_Select_Text.BackgroundColor3 = b
 			Parent.Parent.Material_Select_Text.Material_Select.BackgroundColor3 = b
-			BackgroundColor.Text = Name
+			BackgroundColor["Color Display"].ImageColor3 = b
 		elseif Button_Background_Color_Toggle then
 			BackgroundFor(Parent, b)
 			BackgroundFor(Settings.Background, b)
-			BackgroundFor(Parent.Parent.Color_Select_Text.Color_Select, b)
 			BackgroundFor(Parent.Parent.Material_Select_Text.Material_Select, b)
-			Button_BackgroundColor.Text = Name
+			Button_BackgroundColor["Color Display"].ImageColor3 = b
 		elseif Text_Color_Toggle then
 			TextFor(Parent, b)
 			TextFor(Settings.Background, b)
-			TextFor(Parent.Parent.Color_Select_Text.Color_Select, b)
 			TextFor(Parent.Parent.Material_Select_Text.Material_Select, b)
-			TextColor.Text = Name
+			TextColor["Color Display"].ImageColor3 = b
 		end
 	end
-	local function FalseToggles(ToggleName)
+	function FalseToggles(ToggleName)
 		if ToggleName ~= "Axe_Material" then
 			Axe_Material_Toggle = false
 		end
@@ -1160,12 +1178,11 @@ local function GAEZGL_fake_script() -- CosmeticsMainFrame.LocalScript
 			Text_Color_Toggle = false
 		end
 	end
-	local function Toggles()
-		Colors.Default.Visible = not Ball_Color_Toggle
+	function Toggles()
 		if Color_Select_Toggle then
-			Parent.Parent.Color_Select_Text.Visible = true
+			Parent.Parent.ColorWheelFrame.Visible = true
 		else
-			Parent.Parent.Color_Select_Text.Visible = false
+			Parent.Parent.ColorWheelFrame.Visible = false
 		end
 		if Material_Select_Toggle then
 			Parent.Parent.Material_Select_Text.Visible = true
@@ -1173,7 +1190,7 @@ local function GAEZGL_fake_script() -- CosmeticsMainFrame.LocalScript
 			Parent.Parent.Material_Select_Text.Visible = false
 		end
 	end
-	local function RecalibratePlayer()
+	function RecalibratePlayer()
 		LocalPlayerName = game.Players.LocalPlayer.Name
 		PM = game.Workspace.playerModels
 		Axe.UsePartColor = true
@@ -1181,6 +1198,38 @@ local function GAEZGL_fake_script() -- CosmeticsMainFrame.LocalScript
 		Axe = PM:WaitForChild(LocalPlayerName).axe
 		Ball = PM:WaitForChild(LocalPlayerName).ball
 	end
+	local function updatecolor(centreOfWheel)
+	
+	
+		local colorPickerCentre = Vector2.new(
+			ColorWheel.Picker.AbsolutePosition.X + (ColorWheel.Picker.AbsoluteSize.X/2),
+			ColorWheel.Picker.AbsolutePosition.Y + (ColorWheel.Picker.AbsoluteSize.Y/2)
+		)
+		local h = (math.pi - math.atan2(colorPickerCentre.Y - centreOfWheel.Y, colorPickerCentre.X - centreOfWheel.X)) / (math.pi * 2)
+	
+		local s = (centreOfWheel - colorPickerCentre).Magnitude / (ColorWheel.AbsoluteSize.X/2)
+	
+		local v = math.abs((DarknessSlider.AbsolutePosition.Y - DarknessPicker.AbsolutePosition.Y) / DarknessPicker.AbsoluteSize.Y - 1)
+	
+		local hsv = Color3.fromHSV(math.clamp(h, 0, 1), math.clamp(s, 0, 1), math.clamp(v, 0, 1))
+	
+	
+		ColorDisplay.ImageColor3 = hsv
+		DarknessPicker.UIGradient.Color = ColorSequence.new{
+			ColorSequenceKeypoint.new(0, hsv), 
+			ColorSequenceKeypoint.new(1, Color3.new(0, 0, 0))
+		}
+	end
+	function HoldDown(Button)
+		isDown = true
+		Button.MouseButton1Up:Connect(function()
+			isDown = false
+		end)
+		while task.wait(0.01) and isDown do
+			ToggleColor(ColorDisplay.ImageColor3)
+		end
+	end
+	Expand()
 	LocalPlayer.CharacterAdded:Connect(function(Char)
 		RecalibratePlayer()
 		Axe.UsePartColor = true
@@ -1190,82 +1239,7 @@ local function GAEZGL_fake_script() -- CosmeticsMainFrame.LocalScript
 		Axe.Material = MaterialList[1]
 		Handle.Material = MaterialList[2]
 		Ball.Material = MaterialList[3]
-	end)
-	Colors.Default.MouseButton1Click:Connect(function()
-		if Axe_Color_Toggle then
-			ToggleColor(Color3.new(0.639216, 0.635294, 0.647059), "Color: Default")
-		elseif Handle_Color_Toggle then
-			ToggleColor(Color3.new(0.623529, 0.537255, 0.403922), "Color: Default")
-		elseif Background_Color_Toggle then
-			ToggleColor(Color3.new(0.513725, 0.305882, 0.807843), "Color: Default")
-		end
-		FalseToggles(false)
-		Toggles()
-	end)
-	Colors.White.MouseButton1Click:Connect(function()
-		ToggleColor(Color3.new(1,1,1), "Color: White")
-		FalseToggles(false)
-		Toggles()
-	end)
-	Colors.Red.MouseButton1Click:Connect(function()
-		ToggleColor(Color3.new(1, 0, 0), "Color: Red")
-		FalseToggles(false)
-		Toggles()
-	end)
-	Colors.Crimson.MouseButton1Click:Connect(function()
-		ToggleColor(Color3.new(0.47451, 0, 0), "Color: Crimson")
-		FalseToggles(false)
-		Toggles()
-	end)
-	Colors.Cyan.MouseButton1Click:Connect(function()
-		ToggleColor(Color3.new(0, 1, 1), "Color: Cyan")
-		FalseToggles(false)
-		Toggles()
-	end)
-	Colors.Yellow.MouseButton1Click:Connect(function()
-		ToggleColor(Color3.new(1, 1, 0), "Color: Yellow")
-		FalseToggles(false)
-		Toggles()
-	end)
-	Colors.Green.MouseButton1Click:Connect(function()
-		ToggleColor(Color3.new(0, 0.439216, 0), "Color: Green")
-		FalseToggles(false)
-		Toggles()
-	end)
-	Colors.Pink.MouseButton1Click:Connect(function()
-		ToggleColor(Color3.new(1, 0, 1), "Color: Pink")
-		FalseToggles(false)
-		Toggles()
-	end)
-	Colors.Purple.MouseButton1Click:Connect(function()
-		ToggleColor(Color3.new(0.470588, 0.117647, 1), "Color: Purple")
-		FalseToggles(false)
-		Toggles()
-	end)
-	Colors.Blue.MouseButton1Click:Connect(function()
-		ToggleColor(Color3.new(0, 0, 1), "Color: Blue")
-		FalseToggles(false)
-		Toggles()
-	end)
-	Colors.Lime.MouseButton1Click:Connect(function()
-		ToggleColor(Color3.new(0, 1, 0), "Color: Lime")
-		FalseToggles(false)
-		Toggles()
-	end)
-	Colors.Gray.MouseButton1Click:Connect(function()
-		ToggleColor(Color3.new(0.317647, 0.317647, 0.317647), "Color: Gray")
-		FalseToggles(false)
-		Toggles()
-	end)
-	Colors.Brown.MouseButton1Click:Connect(function()
-		ToggleColor(Color3.new(0.560784, 0.380392, 0.12549), "Color: Brown")
-		FalseToggles(false)
-		Toggles()
-	end)
-	Colors.Tan.MouseButton1Click:Connect(function()
-		ToggleColor(Color3.new(1, 0.709804, 0.470588), "Color: Tan")
-		FalseToggles(false)
-		Toggles()
+		BallColor["Color Display"].ImageColor3 = Ball.Color
 	end)
 	Materials.Default.MouseButton1Click:Connect(function()
 		if Axe_Material_Toggle then
@@ -1463,17 +1437,66 @@ local function GAEZGL_fake_script() -- CosmeticsMainFrame.LocalScript
 		FalseToggles(false)
 		Toggles()
 	end)
+	ColorWheel.MouseButton1Down:Connect(function()
+		buttonDown = true
+		HoldDown(ColorWheel)
+	end)
+	DarknessPicker.MouseButton1Down:Connect(function()
+		movingSlider = true
+		HoldDown(DarknessPicker)
+	end)
+	uis.InputEnded:Connect(function(input)
+	
+		if input.UserInputType ~= Enum.UserInputType.MouseButton1 then return end
+	
+		buttonDown = false
+		movingSlider = false
+	end)
+	uis.InputChanged:Connect(function(input)
+	
+		if input.UserInputType ~= Enum.UserInputType.MouseMovement then return end
+	
+	
+		local mousePos = uis:GetMouseLocation() - Vector2.new(0, game:GetService("GuiService"):GetGuiInset().Y)
+	
+		local centreOfWheel = Vector2.new(ColorWheel.AbsolutePosition.X + (ColorWheel.AbsoluteSize.X/2), ColorWheel.AbsolutePosition.Y + (ColorWheel.AbsoluteSize.Y/2))
+	
+		local distanceFromWheel = (mousePos - centreOfWheel).Magnitude
+	
+	
+		if distanceFromWheel <= ColorWheel.AbsoluteSize.X/2 and buttonDown then
+	
+			WheelPicker.Position = UDim2.new(0, mousePos.X - ColorWheel.AbsolutePosition.X, 0, mousePos.Y - ColorWheel.AbsolutePosition.Y)
+	
+	
+		elseif movingSlider then
+	
+			DarknessSlider.Position = UDim2.new(DarknessSlider.Position.X.Scale, 0, 0, 
+				math.clamp(
+					mousePos.Y - DarknessPicker.AbsolutePosition.Y, 
+					0, 
+					DarknessPicker.AbsoluteSize.Y)
+			)	
+		end
+	
+	
+		updatecolor(centreOfWheel)
+	end)
 end
-coroutine.wrap(GAEZGL_fake_script)()
-local function XNARWD_fake_script() -- Color_Select_Text.LocalScript 
-	local script = Instance.new('LocalScript', Color_Select_Text)
-
-	script.Parent.Draggable = true
-end
-coroutine.wrap(XNARWD_fake_script)()
-local function HOECPF_fake_script() -- Material_Select_Text.LocalScript 
+coroutine.wrap(DLOZ_fake_script)()
+local function KWSKA_fake_script() -- Material_Select_Text.LocalScript 
 	local script = Instance.new('LocalScript', Material_Select_Text)
 
 	script.Parent.Draggable = true
 end
-coroutine.wrap(HOECPF_fake_script)()
+coroutine.wrap(KWSKA_fake_script)()
+local function VRXES_fake_script() -- ColorWheelFrame.LocalScript 
+	local script = Instance.new('LocalScript', ColorWheelFrame)
+
+	local Parent = script.Parent
+	Parent.Draggable = true
+	Parent.ColorWheel.Close.MouseButton1Click:Connect(function()
+		Parent.Visible = false
+	end)
+end
+coroutine.wrap(VRXES_fake_script)()
